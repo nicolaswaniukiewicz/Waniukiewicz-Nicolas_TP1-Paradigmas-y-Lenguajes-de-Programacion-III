@@ -10,9 +10,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
+
 <body>
   <header class="header">
     <a href="index.html"><img class="header__logo" src="img/logo_header.png" alt="logo"></a>
+    <button id="modo-toggle" class="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">
+    <span class="icon sun" aria-hidden="true">🌞</span>
+    <span class="icon moon" aria-hidden="true">🌙</span>
+    <span class="knob" aria-hidden="true"></span>
   </header>
 
   <nav class="navegacion">
@@ -24,17 +29,13 @@
   </nav>
 
   <main class="contenedor">
-    <h1>Guantes de Entrenamiento Nike Pro</h1>
-
-    <div class="camisa">
-      <img class="producto__imagen" src="img/guantes.jpg" alt="Guantes de Entrenamiento Pro">
-
-      <div class="contenido">
-        <p class="producto__precio">$42.000</p>
-        <p>Guantes acolchados con palma antideslizante. Ideales para halterofilia y calistenia.</p>
-        <p>Talles: S / M / L — Color: Negro — Material: cuero sintético + neoprene.</p>
-
-        <a class="navegacion__enlace" href="comprar.html">Comprar</a>
+    <div class="producto-detalle">
+      <img id="producto-imagen" class="producto__imagen-detalle" src="img/almohadilla.jpg" alt="Producto">
+      <div class="producto__informacion-detalle">
+        <h1 id="producto-nombre" class="producto__nombre-detalle">Almohadilla para Barras Olímpicas</h1>
+        <p id="producto-precio" class="producto__precio-detalle">$20.000</p>
+        <p id="producto-descripcion" class="producto__descripcion-detalle">Ideal para entrenamientos de fuerza.</p>
+        <button class="btn-compra">Añadir al carrito</button>
       </div>
     </div>
   </main>
@@ -42,5 +43,8 @@
   <footer class="footer">
     <p class="footer__texto">FitStore - Todos los derechos reservados 2025.</p>
   </footer>
+  
+  <script src="js/producto.js"></script>
+  <script src="js/modo.js"></script>
 </body>
 </html>
