@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FitStore — Tienda</title>
-  <link rel="stylesheet" href="css/normalize.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
   <header class="header">
     <a href="index.html"><img class="header__logo" src="img/logo_header.png" alt="logotipo FitStore"></a>
+    <button id="modo-toggle" class="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">
+    <span class="icon sun" aria-hidden="true">🌞</span>
+    <span class="icon moon" aria-hidden="true">🌙</span>
+    <span class="knob" aria-hidden="true"></span>
+  </button>
   </header>
 
   <nav class="navegacion">
@@ -31,7 +36,7 @@
   <h2>Productos destacados</h2>
   <div class="grid">
     <div class="producto">
-      <a href="producto.html">
+      <a href="producto.html?id=1">
         <img class="producto__imagen" src="img/almohadilla.jpg" alt="almohadilla">
         <div class="producto__informacion">
           <p class="producto__nombre">Almohadilla para Barras Olímpicas</p>
@@ -41,7 +46,7 @@
 
     </div>
     <div class="producto">
-      <a href="producto.html">
+      <a href="producto.html?id=2">
         <img class="producto__imagen" src="img/muñequera.jpg" alt="muñequera">
         <div class="producto__informacion">
           <p class="producto__nombre">Muñequeras Nike PRO</p>
@@ -51,7 +56,7 @@
     </div>
 
     <div class="producto">
-      <a href="producto.html">
+      <a href="producto.html?id=3">
         <img class="producto__imagen" src="img/ruedita.jpg" alt="ruedita">
         <div class="producto__informacion">
           <p class="producto__nombre">Rueda abdominal</p>
@@ -64,10 +69,13 @@
   <div class="catalogo">
     <a class="navegacion__enlace" href="listado_box.html">Ver catálogo completo</a>
   </div>
+
 </main>
 
   <footer class="footer">
     <p class="footer__texto">FitStore - Todos los derechos reservados 2025.</p>
   </footer>
+  
+<script src="js/modo.js"></script>
 </body>
 </html>
