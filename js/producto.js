@@ -1,8 +1,6 @@
-// Obtener el parámetro 'id' de la URL
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get('id');
 
-// Ahora, usar el 'productId' para cargar la información del producto desde un array o base de datos
 const productos = [
   { id: 1, nombre: 'Almohadilla para Barras Olímpicas', precio: '$20.000', descripcion: 'Almohadilla de alta densidad diseñada para barras olímpicas, brinda mayor comodidad y protección en hombros y cuello durante sentadillas y ejercicios de fuerza. Su ajuste seguro evita deslizamientos, mejorando la experiencia de entrenamiento.', imagen: 'almohadilla.jpg' },
   { id: 2, nombre: 'Muñequeras Nike PRO', precio: '$35.000', descripcion: 'Muñequeras de compresión que ofrecen soporte y estabilidad a las muñecas durante entrenamientos intensos. Ideales para levantamiento de pesas y ejercicios funcionales, ayudan a prevenir lesiones y mejorar el rendimiento.', imagen: 'muñequera.jpg' },
@@ -15,19 +13,17 @@ const productos = [
   { id: 9, nombre: 'Collarines Plásticos', precio: '$16.700', descripcion: 'Collarines plásticos ajustables para barras olímpicas de 50 mm de diámetro. Fabricados en material resistente y duradero, ofrecen un ajuste seguro para evitar movimientos indeseados durante tus levantamientos. Fáciles de colocar y quitar, son ideales para entrenamientos de fuerza y levantamiento de pesas.', imagen: 'CollarinesPlasticos.jpg'},
 ];
 
-// Buscar el producto por su ID
 const producto = productos.find(p => p.id == productId);
 
-// Mostrar los detalles del producto
 if (producto) {
   document.getElementById('producto-nombre').innerText = producto.nombre;
   document.getElementById('producto-precio').innerText = producto.precio;
   document.getElementById('producto-descripcion').innerText = producto.descripcion;
   document.getElementById('producto-imagen').src = `img/${producto.imagen}`;
 } else {
-  // Si el producto no existe, mostrar un mensaje de error
   document.getElementById('producto-nombre').innerText = 'Producto no encontrado';
   document.getElementById('producto-precio').innerText = '';
   document.getElementById('producto-descripcion').innerText = '';
   document.getElementById('producto-imagen').src = 'img/no-disponible.jpg';
 }
+
