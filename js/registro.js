@@ -25,3 +25,4 @@ document.getElementById('register-form').addEventListener('submit', function(e) 
     alert('Cuenta creada con éxito!');
 });
 
+
