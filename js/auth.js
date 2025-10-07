@@ -1,5 +1,5 @@
 const LS_KEYS = {
-  USERS: 'fitstore_users',    
+  USERS: 'fitstore_users',     
   SESSION: 'fitstore_session', 
 };
 
